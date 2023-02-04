@@ -5,7 +5,7 @@ it uses sane defaults and some hardening measures for the Systemd service.
 
 By default, all binaries are installed inside `/usr/local/bitcoin-core-<version>/bin` directory. So for example, if you
 are installing the version `23.0`, if you want to invoke the `bitcoin-cli` binary, you will need to
-use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`. Note this is the case for the rest of binaries from Bitcoin.
+use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`. Note this is the case for the rest of the binaries from Bitcoin.
 
 Usually, you don't need the absolute binary path since this role creates a symbolic link
 to `/home/<user>/.bitcoin`. Using absolute routes is only useful when doing updates to the binary and a rollback is required 
@@ -78,7 +78,7 @@ To configure the Bitcoin node, you can use the following variables:
 
 By default, this installer uses `gpg` to verify the integrity and signature of the downloaded artifacts. This
 behaviour is controlled by the `bitcoin_pgp_builders_pub_key` field. The content of this structure and default values
-are the following ones:
+are the following:
 
 | Name       	 | ID                                         	 |
 |--------------|----------------------------------------------|
