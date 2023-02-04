@@ -13,10 +13,10 @@ This role requires a user with `sudo` permissions to work properly.
 
 List of officially supported operating systems:
 
-| ID | Name | Status |
-|---------------------|-------------------------------|
-| `ubuntu2004`         | Ubuntu 20.04         | :heavy_check_mark:             |
-| `ubuntu2204`      | Ubuntu 22.04        |:heavy_check_mark:             |
+| ID           | Name         | Status             |
+|--------------|--------------|--------------------|
+| `ubuntu2004` | Ubuntu 20.04 | :heavy_check_mark: |
+| `ubuntu2204` | Ubuntu 22.04 | :heavy_check_mark: |
 
 ### Testing
 
