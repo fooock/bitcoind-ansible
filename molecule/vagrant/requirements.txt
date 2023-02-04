@@ -1,5 +1,5 @@
-molecule==4.0.1
-molecule-vagrant==1.0.0
+molecule==4.0.4
+molecule-vagrant==2.0.0
 requests==2.28.1
-yamllint==1.27.1
-ansible-core==2.13.3
+yamllint==1.29.0
+ansible-core==2.14.2
