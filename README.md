@@ -13,10 +13,10 @@ This role requires a user with `sudo` permissions to work properly.
 
 List of officially supported operating systems:
 
-| Name              	 | Status              	         |
+| ID | Name | Status |
 |---------------------|-------------------------------|
-| `Ubuntu 20.04`    	 | <center>:heavy_check_mark:</center>          	  |
-| `Ubuntu 22.04`   	  | :heavy_check_mark:          	 |
+| `ubuntu2004`         | Ubuntu 20.04         | :heavy_check_mark:             |
+| `ubuntu2204`      | Ubuntu 22.04        |:heavy_check_mark:             |
 
 ### Testing
 
@@ -26,6 +26,9 @@ to execute tests through Docker or with a VM managed by Vagrant.
 ```bash
 $ molecule test
 ```
+
+If you want to run a test through a specific operating system you can update the `MOLECULE_DISTRO` variable using
+the operating system ID mentioned in the requirements table.
 
 ## Variables
 
