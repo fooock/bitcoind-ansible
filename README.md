@@ -15,7 +15,7 @@ List of officially supported operating systems:
 
 | Name              	 | Status              	         |
 |---------------------|-------------------------------|
-| `Ubuntu 20.04`    	 | :heavy_check_mark:          	 |
+| `Ubuntu 20.04`    	 | <center>:heavy_check_mark:</center>          	  |
 | `Ubuntu 22.04`   	  | :heavy_check_mark:          	 |
 
 ### Testing
