@@ -1,5 +1,7 @@
 # Bitcoin Core Ansible role
 
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/fooock/bitcoind-ansible/ansible.yml?branch=main&logo=github&style=for-the-badge)
+
 Ansible role to install the [Bitcoin Core](https://bitcoincore.org/en/about/) client as a `systemd` service. By default,
 it uses sane defaults and some hardening measures for the Systemd service.
 
