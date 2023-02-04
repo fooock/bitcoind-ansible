@@ -28,7 +28,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies for project
-        run: pip3 install ansible molecule[docker] docker
+        run: pip3 install -r molecule/default/requirements.txt
 
       - name: Test with molecule
         run: molecule test
