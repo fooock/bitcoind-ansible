@@ -1,27 +1,30 @@
-# Ansible Bitcoin Core role
+# Bitcoin Core Ansible role
 
 Ansible role to install the [Bitcoin Core](https://bitcoincore.org/en/about/) client as a `systemd` service. By default,
 it uses sane defaults and some hardening measures for the Systemd service.
 
 By default, all binaries are installed inside `/usr/local/bitcoin-core-<version>/bin` directory. So for example, if you
-are installing
-the version `23.0`, if you want to invoke the `bitcoin-cli` binary, you will need to
-use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`.
-Note this is the case for the rest of binaries from Bitcoin.
+are installing the version `23.0`, if you want to invoke the `bitcoin-cli` binary, you will need to
+use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`. Note this is the case for the rest of binaries from Bitcoin.
 
 ### Requirements
 
-> At this moment this role is only supported in Ubuntu operating systems.
-
 This role requires a user with `sudo` permissions to work properly.
+
+List of officially supported operating systems:
+
+| Name              	 | Status              	         |
+|---------------------|-------------------------------|
+| `Ubuntu 20.04`    	 | :heavy_check_mark:          	 |
+| `Ubuntu 22.04`   	  | :heavy_check_mark:          	 |
 
 ### Testing
 
 You can execute tests using `molecule`. Install the [`requirements.txt`](molecule) file depending on if you want
-to execute tests through Docker or with a VM managed by Vagrant. For example, if you want to use a VM:
+to execute tests through Docker or with a VM managed by Vagrant.
 
 ```bash
-$ molecule test -s vagrant
+$ molecule test
 ```
 
 ## Variables
