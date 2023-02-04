@@ -7,6 +7,10 @@ By default, all binaries are installed inside `/usr/local/bitcoin-core-<version>
 are installing the version `23.0`, if you want to invoke the `bitcoin-cli` binary, you will need to
 use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`. Note this is the case for the rest of binaries from Bitcoin.
 
+Usually, you don't need the absolute binary path since this role creates a symbolic link
+to `/home/<user>/.bitcoin`. Using absolute routes is only useful when doing updates to the binary and a rollback is required 
+or to using a specific binary version to execute an operation.
+
 ### Requirements
 
 This role requires a user with `sudo` permissions to work properly.
@@ -17,6 +21,19 @@ List of officially supported operating systems:
 |--------------|--------------|--------------------|
 | `ubuntu2004` | Ubuntu 20.04 | :heavy_check_mark: |
 | `ubuntu2204` | Ubuntu 22.04 | :heavy_check_mark: |
+
+### How to run this?
+
+Create a playbook like this one:
+
+```yaml
+- hosts: bitcoind
+  roles:
+    - role: fooock.bitcoind
+      become: yes
+```
+
+Note that you can use `become` at a global level instead at the role level.
 
 ### Testing
 
