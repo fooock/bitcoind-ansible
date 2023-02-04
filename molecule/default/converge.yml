@@ -2,6 +2,7 @@
 - name: Converge
   hosts: all
   become: true
+
   vars:
     bitcoin_network: regtest
   roles:
