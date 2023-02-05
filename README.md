@@ -21,8 +21,8 @@ List of officially supported operating systems:
 
 | ID           | Name         | Status             |
 |--------------|--------------|--------------------|
-| `ubuntu2004` | Ubuntu 20.04 | :heavy_check_mark: |
-| `ubuntu2204` | Ubuntu 22.04 | :heavy_check_mark: |
+| `ubuntu2004` | Ubuntu 20.04 | :white_check_mark: |
+| `ubuntu2204` | Ubuntu 22.04 | :white_check_mark: |
 
 ### How to run this?
 
@@ -35,7 +35,17 @@ Create a playbook like this one:
       become: yes
 ```
 
-Note that you can use `become` at a global level instead at the role level.
+Note that you can use `become` at a global level instead at the role level. 
+If you want to install the Bitcoin node into a Raspberry Pi, just change the architecture:
+
+```yaml
+- hosts: bitcoind
+  become: yes
+  vars:
+    bitcoin_arch: aarch64-linux-gnu
+  roles:
+    - role: fooock.bitcoind
+```
 
 ### Testing
 
