@@ -19,10 +19,10 @@ This role requires a user with `sudo` permissions to work properly.
 
 List of officially supported operating systems:
 
-| ID           | Name         | Status         |
-|--------------|--------------|----------------|
-| `ubuntu2004` | Ubuntu 20.04 | :green_circle: |
-| `ubuntu2204` | Ubuntu 22.04 | :green_circle: |
+| ID           | Name         | Status             |
+|--------------|--------------|--------------------|
+| `ubuntu2004` | Ubuntu 20.04 | :white_check_mark: |
+| `ubuntu2204` | Ubuntu 22.04 | :white_check_mark: |
 
 ### How to run this?
 
