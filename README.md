@@ -94,16 +94,15 @@ are the following:
 
 | Name       	 | ID                                         	 |
 |--------------|----------------------------------------------|
-| `darosior` 	 | `590B7292695AFFA5B672CBB2E13FC145CD3F4304` 	 |
-| `guggero`  	 | `F4FC70F07310028424EFC20A8E4256593F177720` 	 |
+| `laanwj` 	   | `71A3B16735405025D447E8F274810B012346C9A6` 	 |
 | `fanquake` 	 | `E777299FC265DD04793070EB944D35F9AC3DB76A` 	 |
 
 If you only want to verify with one user, you should use something like this:
 
 ```yaml
 bitcoin_pgp_builders_pub_key:
-  - id: 590B7292695AFFA5B672CBB2E13FC145CD3F4304
-    name: darosior
+  - id: 71A3B16735405025D447E8F274810B012346C9A6
+    name: laanwj
 ```
 
 > I use the Guix attestations to verify the release. The data can be found on

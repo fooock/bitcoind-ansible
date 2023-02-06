@@ -47,24 +47,6 @@
     checksum: sha256:https://bitcoincore.org/bin/bitcoin-core-{{ bitcoin_version }}/SHA256SUMS
     http_agent: yourbtc-ansible
 
-- name: "Bitcoind | Calculate checksum for '/tmp/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz'"
-  ansible.builtin.stat:
-    checksum_algorithm: sha256
-    path: /tmp/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz
-  register: btc_sha256
-
-- name: "Bitcoind | Ensure that checksum for '/tmp/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz' is valid"
-  ansible.builtin.lineinfile:
-    path: /tmp/SHA256SUMS
-    line: "{{ btc_sha256.stat.checksum }}  bitcoin-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz"
-  check_mode: yes
-  register: checksum_verification
-
-- name: "Bitcoind | Checksum for '/tmp/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz' not found in '/tmp/SHA256SUMS'"
-  ansible.builtin.fail:
-    msg: Checksum {{ btc_sha256.stat.checksum }} is not present inside /tmp/SHA256SUMS for /tmp/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}.tar.gz
-  when: checksum_verification.changed
-
 - name: "Bitcoind | Ensure '/usr/local/bitcoin-core-{{ bitcoin_version }}-{{ bitcoin_arch }}' directory exists"
   ansible.builtin.file:
     path: /usr/local/bitcoin-core-{{ bitcoin_version }}
