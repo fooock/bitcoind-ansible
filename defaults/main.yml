@@ -9,12 +9,10 @@ bitcoin_arch: x86_64-linux-gnu
 
 # Bitcoin GPG public keys. Name must match the ones found in
 # this link https://github.com/bitcoin-core/guix.sigs. The ID of each
-# user can be found here https://github.com/bitcoin/bitcoin/blob/master/contrib/builder-keys/keys.txt
+# user can be found here https://github.com/bitcoin/bitcoin/blob/23.x/contrib/builder-keys/keys.txt
 bitcoin_pgp_builders_pub_key:
-  - id: 590B7292695AFFA5B672CBB2E13FC145CD3F4304
-    name: darosior
-  - id: F4FC70F07310028424EFC20A8E4256593F177720
-    name: guggero
+  - id: 71A3B16735405025D447E8F274810B012346C9A6
+    name: laanwj
   - id: E777299FC265DD04793070EB944D35F9AC3DB76A
     name: fanquake
 
