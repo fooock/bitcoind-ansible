@@ -10,7 +10,8 @@ are installing the version `23.0`, if you want to invoke the `bitcoin-cli` binar
 use `/usr/local/bitcoin-core-23.0/bin/bitcoin-cli`. Note this is the case for the rest of the binaries from Bitcoin.
 
 Usually, you don't need the absolute binary path since this role creates a symbolic link
-to `/home/<user>/.bitcoin`. Using absolute routes is only useful when doing updates to the binary and a rollback is required 
+to `/home/<user>/.bitcoin`. Using absolute routes is only useful when doing updates to the binary and a rollback is
+required
 or to using a specific binary version to execute an operation.
 
 ### Requirements
@@ -35,7 +36,7 @@ Create a playbook like this one:
       become: yes
 ```
 
-Note that you can use `become` at a global level instead at the role level. 
+Note that you can use `become` at a global level instead at the role level.
 If you want to install the Bitcoin node into a Raspberry Pi, just change the architecture:
 
 ```yaml
@@ -64,12 +65,12 @@ the operating system ID mentioned in the requirements table.
 You can change some variables to install this role to fit your needs. The default values to install the
 Bitcoin node are the following ones:
 
-| Name              	 | Value              	 |
-|---------------------|----------------------|
-| `bitcoin_user`    	 | `bitcoin`          	 |
-| `bitcoin_group`   	 | `bitcoin`          	 |
-| `bitcoin_version` 	 | `23.0`             	 |
-| `bitcoin_arch`    	 | `x86_64-linux-gnu` 	 |
+| Name              	 | Value              	   |
+|---------------------|------------------------|
+| `bitcoin_user`    	 | `bitcoin`          	   |
+| `bitcoin_group`   	 | `bitcoin`          	   |
+| `bitcoin_version` 	 | `24.0.1`             	 |
+| `bitcoin_arch`    	 | `x86_64-linux-gnu` 	   |
 
 > If you want to install Bitcoin into a Raspberry you need to change the architecture to `aarch64-linux-gnu`.
 
@@ -79,8 +80,8 @@ To configure the Bitcoin node, you can use the following variables:
 |------------------------------|-------------------|----------------------------------------------------|
 | `bitcoin_data_dir`     	     | `/data/bitcoin` 	 | 	                                                  |
 | `bitcoin_network`      	     | `main`          	 | Valid values are: `regtest`, `signet` and `test` 	 |
-| `bitcoin_rpc_user`     	     | `yourbtc`       	 | 	                                                  |
-| `bitcoin_rpc_password` 	     | `yourbtc`       	 | 	                                                  |
+| `bitcoin_rpc_user`     	     | `bitcoin`       	 | 	                                                  |
+| `bitcoin_rpc_password` 	     | `bitcoin`       	 | 	                                                  |
 | `bitcoin_zmq_host`     	     | `127.0.0.1`     	 | 	                                                  |
 | `bitcoin_bind`     	         | `127.0.0.1`     	 | 	                                                  |
 | `bitcoin_rpc_bind`     	     | `127.0.0.1`     	 | This is where to expose the RPC server	            |
