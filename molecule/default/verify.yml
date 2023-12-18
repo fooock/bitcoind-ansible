@@ -4,7 +4,7 @@
   become: true
   gather_facts: false
   vars:
-    bitcoin_version: 24.0.1
+    bitcoin_version: 26.0
 
   tasks:
     - name: "Retrieve information from /usr/local/bitcoin-core-{{ bitcoin_version }}"
