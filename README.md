@@ -65,12 +65,12 @@ the operating system ID mentioned in the requirements table.
 You can change some variables to install this role to fit your needs. The default values to install the
 Bitcoin node are the following ones:
 
-| Name              	 | Value              	   |
-|---------------------|------------------------|
-| `bitcoin_user`    	 | `bitcoin`          	   |
-| `bitcoin_group`   	 | `bitcoin`          	   |
-| `bitcoin_version` 	 | `24.0.1`             	 |
-| `bitcoin_arch`    	 | `x86_64-linux-gnu` 	   |
+| Name              	 | Value              	 |
+|---------------------|----------------------|
+| `bitcoin_user`    	 | `bitcoin`          	 |
+| `bitcoin_group`   	 | `bitcoin`          	 |
+| `bitcoin_version` 	 | `26.0`             	 |
+| `bitcoin_arch`    	 | `x86_64-linux-gnu` 	 |
 
 > If you want to install Bitcoin into a Raspberry you need to change the architecture to `aarch64-linux-gnu`.
 
